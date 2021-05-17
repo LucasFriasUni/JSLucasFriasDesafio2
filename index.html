@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucas Frias Desafio Numero 2 Coderhouse JS</title>
+</head>
+<!--Crea un algoritmo que solicite al usuario uno o más valores ingresados por prompt(), 
+    compare las entradas y, en función de ciertas condiciones, muestre por consola o alert() 
+    el resultado según los valores ingresados y las condiciones cumplidas.-->
+<body>
+
+    <script>
+
+        let nombre = prompt ("Hola!\nIngresa tu primer nombre");
+
+        if ((nombre != "") && (((nombre == "Juan") || (nombre == "juan") || (nombre == "JUAN")))) {
+            alert("Bienvenido Tutor");
+            let resultado = prompt ("Ahora va una dificil: ¿ 2 + 2 ?"); /*Lo unico que no entiendo de esto es como reconoce un numero el if de abajo si no lo parseo*/
+
+            if(resultado == 4){ /*Calculo que aca lo ha de entender como un char, porque si lo pongo con === me da error*/
+                alert("Perfecto!");
+            }else if ((resultado == "cuatro") || (resultado == "Cuatro")) { /*Se que podria usar un || para el if de arriba, pero uso el else if porque bueno, la actividad lo pide*/
+                alert ("Perfecto!, pero esta vez con letras.");
+            }else {
+                alert ("Em, seguro se le patino el dedo del teclado");
+            }
+
+        }else{
+            alert("Creo que no sos mi tutor, como obtuviste este codigo?");
+        }
+    </script>
+    
+</body>
+</html>
